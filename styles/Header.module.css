@@ -1,0 +1,223 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: var(--bg-header);
+  box-shadow: 0 0 0 1px var(--shadow-color);
+}
+.header > section {
+  padding: 20px;
+}
+.navegacion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.col a {
+  color: var(--gris-4);
+  font-size: 14px;
+  transition: 0.3s ease all;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.col a:hover {
+  color: var(--white);
+}
+.col a.white {
+  color: var(--white);
+}
+.col i {
+  font-size: 22px;
+}
+.relative {
+  position: relative;
+  z-index: 1;
+  gap: 0;
+}
+.relative a {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.transladar {
+  position: absolute;
+  width: 88px;
+  height: 35px;
+  background: var(--item-hover);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  transition-property: width, transform, opacity;
+}
+.logo {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+.logo i {
+  font-size: 30px;
+}
+.animacion {
+  animation: colorear 1s ease infinite alternate;
+}
+@keyframes colorear {
+  0% {
+    color: var(--gris-4);
+  }
+  100% {
+    color: var(--white);
+  }
+}
+.menu {
+  display: none;
+}
+.header .descargar {
+  padding: 10px;
+  border-radius: 4px;
+  transition: var(--transition-03s);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-header-btn);
+  background: transparent;
+  color: var(--border-header-btn);
+}
+.header .descargar:last-child {
+  background: var(--bg-header-btn);
+  color: var(--color-header-btn);
+}
+.header .descargar:hover {
+  border-color: var(--color-header-btn-hover);
+  background: transparent;
+  color: var(--color-header-btn-hover);
+}
+@media (max-width: 990px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .menu i {
+    font-size: 35px;
+    pointer-events: none;
+  }
+  .header > section {
+    background: var(--black);
+    box-shadow: 0 0 0 1px var(--shadow-color);
+    z-index: 5;
+  }
+  .navegacion {
+    width: 100%;
+    position: fixed;
+    top: -100px;
+    right: 0;
+    padding: 20px;
+    background-color: var(--body-color);
+    box-shadow: 0 0 0 1px var(--shadow-color);
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    z-index: -1;
+    opacity: 0;
+  }
+  .navegacion.activo {
+    top: 75px;
+    opacity: 1;
+  }
+  .col {
+    justify-content: space-between;
+  }
+  .navegacion svg:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 890px) {
+  .iconos {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .transladar {
+    display: none;
+  }
+  .navegacion {
+    max-width: 200px;
+    right: 18px;
+    padding: 0;
+    top: -400px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 0;
+    pointer-events: none;
+  }
+  .navegacion.activo {
+    top: 90px;
+    overflow: visible;
+    pointer-events: all;
+  }
+  .navegacion .col {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .navegacion a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 12px 20px;
+    box-shadow: inset 0 -1px 0 0 var(--shadow-color);
+    text-transform: uppercase;
+  }
+  .relative a,
+  .descargar {
+    border-radius: 0;
+  }
+  .header .descargar ,
+  .header .descargar:last-child {
+    border: none;
+    margin: 0;
+    background: transparent;
+    color: var(--gris-4);
+    border-radius: 0;
+  }
+  .header .descargar:hover ,
+  .header .descargar:last-child:hover{
+    color: var(--white);
+  }
+  .navegacion a:hover {
+    background: var(--item-hover);
+  }
+  .navegacion svg {
+    display: none;
+  }
+  .navegacion .iconos {
+    display: flex;
+    padding: 0;
+  }
+  .iconos a {
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: inset 0 -1px 0 0 var(--shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconos a:hover {
+    background: var(--body-color);
+  }
+}

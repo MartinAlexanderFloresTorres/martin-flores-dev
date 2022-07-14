@@ -1,0 +1,38 @@
+.introProyectos {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.botonVerMas {
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: block;
+  padding: 15px 20px;
+  color: var(--black);
+  background: var(--bg-boton);
+  border: 1px solid var(--bg-boton);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-03s);
+}
+.botonVerMas:hover{
+  background: transparent;
+  color: var(--bg-boton);
+}
+.botonVerMas i {
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  .introProyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .introProyectos {
+    grid-template-columns: 1fr;
+  }
+}

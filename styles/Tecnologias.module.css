@@ -1,0 +1,47 @@
+.tecnologias {
+  width: 100%;
+  height: fit-content;
+  box-shadow: inset 0 -1px 0 0 hsla(0, 0%, 100%, 0.1),
+  inset 0 1px 0 0 hsla(0, 0%, 100%, 0.1);
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.item {
+  user-select: none;
+  position: relative;
+  background: var(--tecnologia-bg);
+  padding: 10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tecnologia {
+  opacity: 0;
+  text-transform: uppercase;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: var(--transition-03s);
+  font-size: 14px;
+}
+.item img,
+.item svg {
+  cursor: pointer;
+}
+.item div:hover ~ .tecnologia,
+.item svg:hover ~ .tecnologia {
+  opacity: 1;
+  bottom: -30px;
+}

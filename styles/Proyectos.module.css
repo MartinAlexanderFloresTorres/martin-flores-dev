@@ -1,0 +1,71 @@
+.top {
+  box-shadow: inset 0 -1px 0 0 var(--shadow-color);
+  background: var(--black);
+}
+.cabezera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 180px;
+}
+.titulo {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.parrafo {
+  font-size: 15px;
+}
+.fomulario {
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+.fomulario input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: var(--shadow);
+  color: var(--white);
+  padding: 16px 16px 16px 38px;
+  border-radius: 5px;
+}
+.fomulario i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--gris-1);
+}
+.contenedor {
+  background: var(--body-color-2);
+}
+.grid {
+  transform: translateY(-100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .grid {
+    transform: none;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cabezera {
+    display: block;
+    padding: 30px;
+  }
+  .parrafo {
+    margin-bottom: 30px;
+  }
+  .fomulario {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

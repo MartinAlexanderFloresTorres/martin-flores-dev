@@ -1,0 +1,15 @@
+.titulo {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: var(--white);
+}
+.small {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+}

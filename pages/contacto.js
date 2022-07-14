@@ -131,7 +131,7 @@ function Contacto() {
             <a
               href="https://github.com/MartinAlexanderFloresTorres"
               target={"_blank"}
-              rel="noopener"
+              rel="noreferrer"
               className={styles.link}
             >
               <i className="bx bxl-github" />
@@ -143,7 +143,7 @@ function Contacto() {
             <a
               href="https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/"
               target={"_blank"}
-              rel="noopener"
+              rel="noreferrer"
               className={styles.link}
             >
               <i className="bx bxl-linkedin" />
@@ -155,7 +155,7 @@ function Contacto() {
             <a
               href="https://web.facebook.com/garena.flores.9"
               target={"_blank"}
-              rel="noopener"
+              rel="noreferrer"
               className={styles.link}
             >
               <i className="bx bxl-facebook" />
@@ -167,7 +167,7 @@ function Contacto() {
             <a
               href="https://www.instagram.com/martin_flores_28"
               target={"_blank"}
-              rel="noopener"
+              rel="noreferrer"
               className={styles.link}
             >
               <i className="bx bxl-instagram" />
@@ -179,7 +179,7 @@ function Contacto() {
             <a
               href="https://api.whatsapp.com/send?phone=929254912&text=Hola Martin, Me gustaria Contratarte."
               target={"_blank"}
-              rel="noopener"
+              rel="noreferrer"
               className={styles.link}
             >
               <i className="bx bxl-whatsapp" />
@@ -191,7 +191,7 @@ function Contacto() {
           <a
             href="https://github.com/MartinAlexanderFloresTorres?tab=repositories"
             target={"_blank"}
-            rel="noopener"
+            rel="noreferrer"
             className={styles.link_dos}
           >
             Descarga recursos desde mi Repositorio

@@ -51,7 +51,7 @@ function Footer() {
                   className={styles.link}
                   href="https://nextjs.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Next.js
                 </a>
@@ -61,7 +61,7 @@ function Footer() {
                   className={styles.link}
                   href="https://vitejs.dev/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Vite.js
                 </a>
@@ -71,7 +71,7 @@ function Footer() {
                   className={styles.link}
                   href="https://create-react-app.dev/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Create React App
                 </a>
@@ -81,7 +81,7 @@ function Footer() {
                   className={styles.link}
                   href="https://nodejs.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Node.js
                 </a>
@@ -105,7 +105,7 @@ function Footer() {
                   className={styles.link}
                   href="https://reactjs.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   React
                 </a>
@@ -115,7 +115,7 @@ function Footer() {
                   className={styles.link}
                   href="https://es.redux.js.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Redux
                 </a>
@@ -125,7 +125,7 @@ function Footer() {
                   className={styles.link}
                   href="https://reactjs.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   React Router DOM
                 </a>
@@ -135,7 +135,7 @@ function Footer() {
                   className={styles.link}
                   href="https://formik.org/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Formik
                 </a>
@@ -145,7 +145,7 @@ function Footer() {
                   className={styles.link}
                   href="https://tailwindcss.com/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   tailwindcss
                 </a>
@@ -155,7 +155,7 @@ function Footer() {
                   className={styles.link}
                   href="https://getbootstrap.com/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   booststrap
                 </a>
@@ -213,7 +213,7 @@ function Footer() {
                   className={styles.link}
                   href="https://github.com/MartinAlexanderFloresTorres"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Github
                 </a>
@@ -223,7 +223,7 @@ function Footer() {
                   className={styles.link}
                   href="https://web.facebook.com/garena.flores.9"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Facebook
                 </a>
@@ -233,7 +233,7 @@ function Footer() {
                   className={styles.link}
                   href="https://www.instagram.com/martin_flores_28"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Instagram
                 </a>
@@ -243,7 +243,7 @@ function Footer() {
                   className={styles.link}
                   href="https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Linkedin
                 </a>
@@ -253,7 +253,7 @@ function Footer() {
                   className={styles.link}
                   href="https://twitter.com/Martinflores_21"
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Twitter
                 </a>
@@ -263,7 +263,7 @@ function Footer() {
                   className={styles.link}
                   href="https://api.whatsapp.com/send?phone=929254912&text=Hola Martin, Me gustaria Contratarte."
                   target={"_blank"}
-                  rel="noopener"
+                rel="noreferrer"
                 >
                   Whatsapp
                 </a>
@@ -278,7 +278,7 @@ function Footer() {
               <a
                 href="https://github.com/MartinAlexanderFloresTorres"
                 target={"_blank"}
-                rel="noopener"
+              rel="noreferrer"
                 title="github"
               >
                 <i className="bx bxl-github" />
@@ -286,7 +286,7 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/"
                 target={"_blank"}
-                rel="noopener"
+              rel="noreferrer"
                 title="linkedin"
               >
                 <i className="bx bxl-linkedin" />
@@ -294,7 +294,7 @@ function Footer() {
               <a
                 href="https://www.instagram.com/martin_flores_28"
                 target={"_blank"}
-                rel="noopener"
+              rel="noreferrer"
                 title="instagram"
               >
                 <i className="bx bxl-instagram" />
@@ -302,7 +302,7 @@ function Footer() {
               <a
                 href="https://web.facebook.com/garena.flores.9"
                 target={"_blank"}
-                rel="noopener"
+              rel="noreferrer"
                 title="facebook"
               >
                 <i className="bx bxl-facebook" />

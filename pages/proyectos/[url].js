@@ -68,7 +68,7 @@ function InfoProyecto({ proyecto }) {
               </div>
               <div className={styles.sitio}>
                 <h2>Sitio web</h2>
-                <a href={link} target="_blank" rel="noopener">
+                <a href={link} target="_blank"  rel="noreferrer">
                   {link.split("https://")}
                 </a>
               </div>
@@ -79,7 +79,7 @@ function InfoProyecto({ proyecto }) {
                   className={styles.repositorio}
                   href={repositorio}
                   target="_blank"
-                  rel="noopener"
+                   rel="noreferrer"
                 >
                   <svg
                     stroke="currentColor"

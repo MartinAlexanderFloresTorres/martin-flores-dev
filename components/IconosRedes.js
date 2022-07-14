@@ -10,7 +10,7 @@ function IconosRedes() {
         <a
           href="https://web.facebook.com/garena.flores.9"
           target={"_blank"}
-          rel="noopener"
+         rel="noreferrer"
           title="facebook"
         >
           <Image
@@ -25,7 +25,7 @@ function IconosRedes() {
         <a
           href="https://www.instagram.com/martin_flores_28"
           target={"_blank"}
-          rel="noopener"
+         rel="noreferrer"
           title="instagram"
         >
           <Image
@@ -40,7 +40,7 @@ function IconosRedes() {
         <a
           href="https://github.com/MartinAlexanderFloresTorres"
           target={"_blank"}
-          rel="noopener"
+         rel="noreferrer"
           title="github"
         >
           <Image
@@ -55,7 +55,7 @@ function IconosRedes() {
         <a
           href="https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/"
           target={"_blank"}
-          rel="noopener"
+         rel="noreferrer"
           title="linkedin"
         >
           <Image

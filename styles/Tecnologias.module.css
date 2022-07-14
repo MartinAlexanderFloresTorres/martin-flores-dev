@@ -40,6 +40,10 @@
 .item svg {
   cursor: pointer;
 }
+.item div{
+  display: grid;
+  place-content: center;
+}
 .item div:hover ~ .tecnologia,
 .item svg:hover ~ .tecnologia {
   opacity: 1;

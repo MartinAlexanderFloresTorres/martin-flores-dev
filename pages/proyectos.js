@@ -2,7 +2,7 @@ import { useState } from "react";
 import Layout from "../components/Layout";
 import styles from "../styles/Proyectos.module.css";
 import Proyecto from "../components/Proyecto";
-import IconosRedes from "../components/iconosRedes";
+import IconosRedes from "../components/IconosRedes";
 import BoxContacto from "../components/BoxContacto";
 
 function Proyectos({ proyectos }) {

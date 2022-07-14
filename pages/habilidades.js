@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import MisHabilidades from "../components/MisHabilidades";
 import Cabezera from "../components/Cabezera";
 import Titulo from "../components/Titulo";
-import IconosRedes from "../components/iconosRedes";
+import IconosRedes from "../components/IconosRedes";
 import BoxContacto from "../components/BoxContacto";
 
 function Habilidades() {

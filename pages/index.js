@@ -7,7 +7,7 @@ import IntroProyectos from "../components/IntroProyectos";
 import Tecnologias from "../components/Tecnologias";
 import MisHabilidades from "../components/MisHabilidades";
 import Extras from "../components/Extras";
-import IconosRedes from "../components/iconosRedes";
+import IconosRedes from "../components/IconosRedes";
 import BoxContacto from "../components/BoxContacto";
 
 function Home({ proyectos, data_presentacion }) {

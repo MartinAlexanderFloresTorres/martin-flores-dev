@@ -6,7 +6,7 @@
   gap: 30px;
 }
 .hobies.active {
-  background-image: url("../public/img/banner_3.webp");
+  background-image: url("/img/banner_3.webp");
 }
 .pasatiempos {
   grid-column: 1 /-1;

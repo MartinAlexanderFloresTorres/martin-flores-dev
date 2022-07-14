@@ -204,7 +204,7 @@ ul {
   }
 }
 .banner {
-  background-image: url("../public/img/banner_4.webp");
+  background-image: url("/img/banner_4.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,7 +215,7 @@ ul {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.8)
     ),
-    url("../public/img/banner_1.webp");
+    url("/img/banner_1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -229,7 +229,7 @@ ul {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.8)
     ),
-    url("../public/img/banner_3.webp");
+    url("/img/banner_3.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -250,7 +250,7 @@ ul {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.8)
     ),
-    url("../public/img/banner_1.webp");
+    url("/img/banner_1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -261,7 +261,7 @@ ul {
 html.claro body .banner_3,
 html.claro body .banner_2,
 html.claro body .banner_4 {
-  background-image: url("../public/img/banner_4.webp");
+  background-image: url("/img/banner_4.webp");
 }
 form.error input::placeholder {
   color: #ff7676;

@@ -33,7 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-sitio web: 
-https://martin-dev.netlify.app/
-https://martin-flores-dev.vercel.app/
+deploment en netlify: https://martin-dev.netlify.app/
+
+deploment en vercel: https://martin-flores-dev.vercel.app/
 ![Captura de pantalla (124)](https://user-images.githubusercontent.com/91045865/179121725-71997e08-5c4d-46b1-87c3-d19fb8b8ee09.png)

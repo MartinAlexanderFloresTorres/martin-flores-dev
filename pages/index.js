@@ -52,7 +52,7 @@ function Home({ proyectos, data_presentacion }) {
 export async function getServerSideProps() {
   try {
     const [res_proyectos, res_introducion] = await Promise.all([
-      fetch(`${process.env.API_URL}/proyectos`),
+      fetch(`${process.env.API_URL}/proyectos?_limit=6`),
       fetch(`${process.env.API_URL}/presentacion`),
     ]);
     const [data_proyectos, data_presentacion] = await Promise.all([

@@ -136,7 +136,7 @@ function Contacto() {
             >
               <i className="bx bxl-github" />
               <span>
-                <span className={styles.mediante}>Mediante mi </span> github
+                <span className={styles.mediante}>Mediante</span> github
               </span>
             </a>
 
@@ -148,7 +148,7 @@ function Contacto() {
             >
               <i className="bx bxl-linkedin" />
               <span>
-                <span className={styles.mediante}>Mediante mi </span> linkedin
+                <span className={styles.mediante}>Mediante</span> linkedin
               </span>
             </a>
 
@@ -160,7 +160,7 @@ function Contacto() {
             >
               <i className="bx bxl-facebook" />
               <span>
-                <span className={styles.mediante}>Mediante mi </span> facebook
+                <span className={styles.mediante}>Mediante</span> facebook
               </span>
             </a>
 
@@ -172,7 +172,7 @@ function Contacto() {
             >
               <i className="bx bxl-instagram" />
               <span>
-                <span className={styles.mediante}>Mediante mi </span> instagram
+                <span className={styles.mediante}>Mediante</span> instagram
               </span>
             </a>
 
@@ -184,7 +184,7 @@ function Contacto() {
             >
               <i className="bx bxl-whatsapp" />
               <span>
-                <span className={styles.mediante}>Mediante mi </span> whatsapp
+                <span className={styles.mediante}>Mediante</span> whatsapp
               </span>
             </a>
           </div>

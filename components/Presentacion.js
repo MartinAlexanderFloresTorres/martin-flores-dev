@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 function Presentacion({ informacion }) {
   const [mostrar, setMostrar] = useState(false);
-  const [mensaje, setMensaje] = useState("Contratar Ahora");
+  const [mensaje, setMensaje] = useState("");
   const { push } = useRouter();
 
   const {
@@ -42,7 +42,7 @@ function Presentacion({ informacion }) {
           >
             <h3>👋</h3>
             <div>
-              <p>Hola, soy</p>
+              <p>Hola, me llamo</p>
               <h2>{nombre}</h2>
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ function Presentacion({ informacion }) {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Contratame ahora"
+              placeholder="Contácteme ahora"
               value={mensaje}
               onChange={(e) => setMensaje(e.target.value)}
             />

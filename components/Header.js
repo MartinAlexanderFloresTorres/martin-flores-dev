@@ -141,7 +141,7 @@ function Header() {
                   onClick={() => setActivo(false)}
                   className={`${pathname == "/hobies" && styles.white}`}
                 >
-                  Hobies
+                  Hobbies
                 </a>
               </Link>
               <svg

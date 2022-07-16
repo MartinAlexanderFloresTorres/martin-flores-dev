@@ -42,7 +42,7 @@ function Presentacion({ informacion }) {
           >
             <h3>👋</h3>
             <div>
-              <p>Hola, me llamo</p>
+              <p>Hola, mi nombre es</p>
               <h2>{nombre}</h2>
             </div>
           </motion.div>

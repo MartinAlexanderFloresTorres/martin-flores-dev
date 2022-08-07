@@ -1,40 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import styles from "../styles/Proyectos.module.css";
 import Proyecto from "../components/Proyecto";
 import IconosRedes from "../components/IconosRedes";
 import BoxContacto from "../components/BoxContacto";
+import useProyectos from "../hooks/useProyectos";
+import Preload from "../components/Preload";
 
-function Proyectos({ proyectos }) {
+function Proyectos() {
   const [busqueda, setBusquedad] = useState("");
+  const [Losproyectos, setLosProyectos] = useState([]);
   const [error, setError] = useState(false);
+  const { proyectos } = useProyectos();
+
+  useEffect(() => {
+    setLosProyectos(proyectos);
+  }, [proyectos]);
 
   //=============== FILTRAR PROYECTOS ===============//
   const filtrar = (e) => {
-    setBusquedad(e.target.value);
-    // selectores
-    const divProyecto = document.querySelectorAll("#proyecto");
-    const valor = e.target.value.toLowerCase();
-    // verificacion
-    divProyecto.forEach((chat) => {
-      // texto busqueda
-      let name = chat.querySelector("#titulo").textContent.toLocaleLowerCase();
-
-      // filtrar
-      if (name.indexOf(valor) != -1) {
-        chat.classList.remove("ocultar");
-        chat.classList.add("aparecer");
-      } else {
-        chat.classList.remove("aparecer");
-        chat.classList.add("ocultar");
-      }
-      // mostrar mensaje
-      if (chat.classList.contains("ocultar")) {
+    if (proyectos.length > 0) {
+      setBusquedad(e.target.value);
+      const proyectosEncontrados = proyectos.filter((proyecto) =>
+        proyecto.titulo
+          .toLocaleLowerCase()
+          .includes(e.target.value.toLocaleLowerCase())
+      );
+      if (proyectosEncontrados.length === 0) {
         setError(true);
       } else {
         setError(false);
       }
-    });
+      setLosProyectos(proyectosEncontrados);
+    }
   };
 
   return (
@@ -61,11 +59,18 @@ function Proyectos({ proyectos }) {
       <main className={styles.contenedor}>
         <section className={`${styles.grid} contenedor`}>
           {proyectos.length > 0 ? (
-            proyectos.map((proyecto) => (
+            Losproyectos.map((proyecto) => (
               <Proyecto key={proyecto._id} proyecto={proyecto} />
             ))
           ) : (
-            <div className="no_proyectos">No hay proyectos que mostrar</div>
+            <>
+              <Preload />
+              <Preload />
+              <Preload />
+              <Preload />
+              <Preload />
+              <Preload />
+            </>
           )}
           {error && (
             <div className="no_proyectos">No se encontraron resultados</div>
@@ -76,44 +81,6 @@ function Proyectos({ proyectos }) {
       <BoxContacto />
     </Layout>
   );
-}
-
-//=============== contruye la pagina en cada request ===============//
-export async function getServerSideProps() {
-  try {
-    const res = await fetch(`${process.env.API_URL}/proyectos`);
-    const data = await res.json();
-
-    const proyectos = data.map((proyecto) => {
-      const {
-        imagen_previa,
-        fecha_creacion,
-        titulo,
-        url,
-        repositorio,
-        link,
-        _id,
-      } = proyecto;
-      const objeto = {
-        imagen_previa,
-        fecha_creacion,
-        titulo,
-        url,
-        _id,
-        link,
-        repositorio,
-      };
-      return objeto;
-    });
-    return {
-      props: { proyectos },
-    };
-  } catch (error) {
-    console.log(error);
-    return {
-      props: { proyectos: [] },
-    };
-  }
 }
 
 export default Proyectos;

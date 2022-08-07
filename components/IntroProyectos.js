@@ -1,17 +1,27 @@
 import Link from "next/link";
 import Proyecto from "./Proyecto";
 import styles from "../styles/IntroProyectos.module.css";
+import useProyectos from "../hooks/useProyectos";
+import Preload from "./Preload";
 
-function IntroProyectos({ proyectos }) {
+function IntroProyectos() {
+  const { entradaProyectos } = useProyectos();
   return (
     <>
       <div className={styles.introProyectos}>
-        {proyectos.length > 0 ? (
-          proyectos.map((proyecto) => (
+        {entradaProyectos.length > 0 ? (
+          entradaProyectos.map((proyecto) => (
             <Proyecto key={proyecto._id} proyecto={proyecto} />
           ))
         ) : (
-          <div className="no_proyectos">No hay proyectos que mostrar</div>
+          <>
+            <Preload />
+            <Preload />
+            <Preload />
+            <Preload />
+            <Preload />
+            <Preload />
+          </>
         )}
       </div>
       <div className="contenedor_boton">

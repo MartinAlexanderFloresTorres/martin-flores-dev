@@ -24,7 +24,7 @@
   gap: 30px;
   transition: var(--transition-03s);
 }
-.grid p{
+.grid p {
   white-space: pre-wrap;
 }
 .rigth {

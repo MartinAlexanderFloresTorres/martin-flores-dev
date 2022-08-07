@@ -5,17 +5,10 @@ import styles from "../styles/Presentacion.module.css";
 import Circulos from "./Circulos";
 import { motion } from "framer-motion";
 
-function Presentacion({ informacion }) {
+function Presentacion() {
   const [mostrar, setMostrar] = useState(false);
   const [mensaje, setMensaje] = useState("");
   const { push } = useRouter();
-
-  const {
-    imagen: { url },
-    nombre,
-    cargo,
-    descripcion,
-  } = informacion;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +36,7 @@ function Presentacion({ informacion }) {
             <h3>👋</h3>
             <div>
               <p>Hola, mi nombre es</p>
-              <h2>{nombre}</h2>
+              <h2>MARTIN ALEXANDER FLORES TORRES</h2>
             </div>
           </motion.div>
 
@@ -52,7 +45,7 @@ function Presentacion({ informacion }) {
             transition={{ duration: 1 }}
             className={styles.myCargo}
           >
-            <p>{cargo}</p>
+            <p>SOFTWARE DEVELOPER FREELANCER</p>
           </motion.div>
 
           <motion.div
@@ -60,14 +53,14 @@ function Presentacion({ informacion }) {
             transition={{ duration: 1 }}
             className={styles.imagen}
           >
-            <Image
-              layout="responsive"
-              width={100}
-              height={100}
-              priority
-              src={url}
-              alt="usuario"
-            />
+            {<Image
+                layout="responsive"
+                width={100}
+                height={100}
+                priority
+                src={"/img/imagen_usuario.png"}
+                alt="usuario"
+              />}
           </motion.div>
         </div>
 
@@ -76,7 +69,12 @@ function Presentacion({ informacion }) {
           transition={{ duration: 1 }}
           className={styles.descripcion_box}
         >
-          <p>{descripcion}</p>
+          <p>
+            estudiante de desarrollo web full stack, con gran interés en acceder
+            al mercado laboral para poner en práctica mis conocimientos. soy una
+            persona trabajadora, comunicativa y comprometida. desearía encontrar
+            una oportunidad para adquirir más experiencia profesional.
+          </p>
         </motion.div>
 
         <motion.div

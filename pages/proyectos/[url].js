@@ -4,23 +4,26 @@ import Layout from "../../components/Layout";
 import Titulo from "../../components/Titulo";
 import styles from "../../styles/InfoProyecto.module.css";
 import { formatearFecha } from "../../helpers";
+import useProyectos from "../../hooks/useProyectos";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import Preload from "../../components/Preload";
 
-function InfoProyecto({ proyecto }) {
+function InfoProyecto() {
+  const [proyecto, setProyecto] = useState({});
+
   const {
-    titulo,
-    resumen_uno,
-    resumen_negrita,
-    resumen_dos,
-    imagen_previa,
-    imagenes,
-    tecnologias,
-    link,
-    fecha_creacion,
-    repositorio,
-    updatedAt,
-  } = proyecto[0];
+    query: { url },
+  } = useRouter();
 
-  let image_url = imagen_previa.formats.medium.url;
+  const { proyectos } = useProyectos();
+
+  useEffect(() => {
+    const pro = proyectos.filter((proyecto) => proyecto.url === url);
+    if (pro.length > 0) {
+      setProyecto(pro[0]);
+    }
+  }, [proyectos]);
 
   return (
     <Layout pagina={"nombre del proyecto"}>
@@ -31,32 +34,42 @@ function InfoProyecto({ proyecto }) {
             Volver a los proyectos
           </a>
         </Link>
-        <h1 className={styles.titulo}>{titulo}</h1>
+        <h1 className={styles.titulo}>{proyecto?.titulo}</h1>
         <section className={styles.grid}>
-          <div>
-            <p>{resumen_uno}</p>
-            <p className={styles.negrita}>{resumen_negrita}</p>
-            <p>{resumen_dos}</p>
+          <div style={{width: "100%"}}>
+            {!proyecto?.resumen_negrita ? (
+              <Preload />
+            ) : (
+              <>
+                <p>{proyecto?.resumen_uno}</p>
+                <p className={styles.negrita}>{proyecto?.resumen_negrita}</p>
+                <p>{proyecto?.resumen_dos}</p>
+              </>
+            )}
           </div>
 
           <div className={styles.rigth}>
             <div className={styles.imagen}>
-              <Image
-                layout="responsive"
-                width={300}
-                height={200}
-                priority
-                src={image_url}
-                alt="fs"
-              />
+              {proyecto?.imagen_previa ? (
+                <Image
+                  layout="responsive"
+                  width={300}
+                  height={200}
+                  priority
+                  src={proyecto?.imagen_previa?.formats?.medium?.url}
+                  alt="proyecto"
+                />
+              ) : (
+                <Preload />
+              )}
             </div>
             <div>
               <div className={styles.box}>
                 <h2 className={styles.subTitulo}>Tecnologias actualizadas</h2>
                 <div className={styles.tecnologias}>
-                  {tecnologias.tecno.length > 0 ? (
-                    tecnologias.tecno.map((tecnologia) => (
-                      <span key={tecnologia.id}>{tecnologia.nombre}</span>
+                  {proyecto?.tecnologias?.tecno?.length > 0 ? (
+                    proyecto?.tecnologias?.tecno?.map((tecnologia) => (
+                      <span key={tecnologia.id}>{tecnologia?.nombre}</span>
                     ))
                   ) : (
                     <>
@@ -68,8 +81,8 @@ function InfoProyecto({ proyecto }) {
               </div>
               <div className={styles.sitio}>
                 <h2>Sitio web</h2>
-                <a href={link} target="_blank"  rel="noreferrer">
-                  {link.split("https://")}
+                <a href={proyecto?.link} target="_blank" rel="noreferrer">
+                  {proyecto?.link?.split("https://")}
                 </a>
               </div>
               <div className={styles.sitio}>
@@ -77,9 +90,9 @@ function InfoProyecto({ proyecto }) {
                 <a
                   title="GitHub"
                   className={styles.repositorio}
-                  href={repositorio}
+                  href={proyecto?.repositorio}
                   target="_blank"
-                   rel="noreferrer"
+                  rel="noreferrer"
                 >
                   <svg
                     stroke="currentColor"
@@ -94,14 +107,18 @@ function InfoProyecto({ proyecto }) {
                   </svg>
                 </a>
               </div>
-              <div className={styles.sitio}>
-                <h2>Fecha de creacion</h2>
-                <p>{formatearFecha(fecha_creacion)}</p>
-              </div>
-              <div className={styles.sitio}>
-                <h2>Ultima Actualizacion</h2>
-                <p>{formatearFecha(updatedAt)}</p>
-              </div>
+              {proyecto?.fecha_creacion && (
+                <>
+                  <div className={styles.sitio}>
+                    <h2>Fecha de creacion</h2>
+                    <p>{formatearFecha(proyecto?.fecha_creacion)}</p>
+                  </div>
+                  <div className={styles.sitio}>
+                    <h2>Ultima Actualizacion</h2>
+                    <p>{formatearFecha(proyecto?.updatedAt)}</p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -109,33 +126,33 @@ function InfoProyecto({ proyecto }) {
         <section className={styles.sglider_contenedor}>
           <Titulo>Imagenes Previas</Titulo>
           <div className={styles.sglider}>
-            {imagenes.map((item) => (
-              <Image
-                key={item.id}
-                layout="responsive"
-                width={300}
-                height={200}
-                priority
-                src={item.formats.medium.url}
-                alt={"sglider"}
-              />
-            ))}
+            {proyecto?.imagenes?.length > 0 ? (
+              proyecto.imagenes.map((item) => (
+                <Image
+                  key={item.id}
+                  layout="responsive"
+                  width={300}
+                  height={200}
+                  priority
+                  src={item?.formats?.medium?.url}
+                  alt={"sglider"}
+                />
+              ))
+            ) : (
+              <>
+                <Preload />
+                <Preload />
+                <Preload />
+                <Preload />
+                <Preload />
+                <Preload />
+              </>
+            )}
           </div>
         </section>
       </main>
     </Layout>
   );
-}
-//=============== getServerSideProps ===============//
-export async function getServerSideProps({ query: { url } }) {
-  const api_url = `${process.env.API_URL}/proyectos?url=${url}`;
-  const respuesta = await fetch(api_url);
-  const proyecto = await respuesta.json();
-  return {
-    props: {
-      proyecto,
-    },
-  };
 }
 
 export default InfoProyecto;

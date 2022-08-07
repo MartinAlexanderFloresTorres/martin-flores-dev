@@ -11,6 +11,15 @@ function Header() {
   const { pathname } = useRouter();
 
   useEffect(() => {
+    const body = document.querySelector("body");
+    if (activo) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }, [activo]);
+
+  useEffect(() => {
     const media_query = window.matchMedia("(max-width: 990px)");
     const mediaMenu = (mq) => {
       if (mq.matches) {

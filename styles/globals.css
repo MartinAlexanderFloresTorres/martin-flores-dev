@@ -24,7 +24,7 @@
   --gris-2: #444;
   --gris-1: #333;
   --gris-0: #0e0e0e;
-  --item-hover: #151515;
+  --item-hover: #0d0d0d;
   --altura: 80px;
   --transition-03s: 0.3s ease all;
   --transition-05s: 0.5s ease all;
@@ -134,6 +134,9 @@ ul {
 ::selection {
   background: var(--selection-bg);
 }
+main {
+  min-height: 100vh;
+}
 /*=============== utilidades ===============*/
 .contenedor {
   max-width: 1300px;
@@ -208,6 +211,7 @@ ul {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: fit-content;
 }
 .banner_2 {
   background-image: linear-gradient(

@@ -13,8 +13,6 @@
 }
 .animacion {
   width: 100%;
-  background: rgb(10, 10, 10);
-  border: 1px solid #232323;
   border-radius: 5px;
   padding: 10px;
   margin-left: auto;
@@ -26,12 +24,11 @@
   animation-iteration-count: infinite;
   animation-name: cargando;
   animation-timing-function: linear;
-  background: #f6f7f8;
   background: linear-gradient(
     to right,
-    #141414 8%,
-    #0f0f0f 18%,
-    #141414 33%
+    var( --bg-loader-1) 8%,
+    var(--bg-loader-2) 18%,
+    var( --bg-loader-1) 33%
     );
     min-height: 20px;
     margin-bottom: 10px;

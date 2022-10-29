@@ -14,7 +14,9 @@ const ProyectosProvider = ({ children }) => {
       const data = await respuesta.json();
       const entrada = data.slice(0, 6);
       setEntradaProyectos(entrada);
-      setProyectos(data);
+      // Ordernar al reves
+      const proyectos = data.reverse();
+      setProyectos(proyectos);
     } catch (error) {
       console.log(error);
     }

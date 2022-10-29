@@ -11,38 +11,38 @@ function Status() {
     <section className={styles.status}>
       <div className={`${styles.contenido} contenedor`}>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={variants}
           transition={{ duration: 1 }}
           className={styles.item}
         >
-          <h2 className={styles.numero}>39+</h2>
-          <h3 className={styles.texto}>Citas</h3>
+          <h2 className={styles.numero}>20+</h2>
+          <h3 className={styles.texto}>tecnologias</h3>
         </motion.div>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={variants}
           transition={{ duration: 1 }}
           className={styles.item}
         >
-          <h2 className={styles.numero}>3+</h2>
+          <h2 className={styles.numero}>2+</h2>
           <h3 className={styles.texto}>Años de Trabajo</h3>
         </motion.div>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={variants}
           transition={{ duration: 1 }}
           className={styles.item}
         >
-          <h2 className={styles.numero}>45+</h2>
+          <h2 className={styles.numero}>65+</h2>
           <h3 className={styles.texto}>Proyectos Terminados</h3>
         </motion.div>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={variants}
           transition={{ duration: 1 }}
           className={styles.item}

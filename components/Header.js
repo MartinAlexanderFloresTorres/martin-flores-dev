@@ -11,15 +11,6 @@ function Header() {
   const { pathname } = useRouter();
 
   useEffect(() => {
-    const body = document.querySelector("body");
-    if (activo) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "auto";
-    }
-  }, [activo]);
-
-  useEffect(() => {
     const media_query = window.matchMedia("(max-width: 990px)");
     const mediaMenu = (mq) => {
       if (mq.matches) {
@@ -43,7 +34,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <section className="contenedor">
+      <section className='contenedor'>
         <nav className={styles.col}>
           <div className={styles.col}>
             <Link href={"/"}>
@@ -54,7 +45,7 @@ function Header() {
                 }`}
                 title={"Inicio"}
               >
-                <i className="bx bx-terminal" />
+                <i className='bx bx-terminal' />
               </a>
             </Link>
             {menu && (
@@ -71,7 +62,7 @@ function Header() {
           >
             <div className={`${styles.col} ${styles.relative}`}>
               <div
-                id="transladar"
+                id='transladar'
                 className={styles.transladar}
                 style={{
                   width: `${width}px`,
@@ -79,19 +70,19 @@ function Header() {
                 }}
               ></div>
               <svg
-                data-testid="geist-icon"
-                fill="none"
-                shapeRendering="geometricPrecision"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                width="26"
-                height="26"
-                color="#333"
+                data-testid='geist-icon'
+                fill='none'
+                shapeRendering='geometricPrecision'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1'
+                viewBox='0 0 24 24'
+                width='26'
+                height='26'
+                color='#333'
               >
-                <path d="M16.88 3.549L7.12 20.451"></path>
+                <path d='M16.88 3.549L7.12 20.451'></path>
               </svg>
               <Link href={"/"}>
                 <a
@@ -104,19 +95,19 @@ function Header() {
                 </a>
               </Link>
               <svg
-                data-testid="geist-icon"
-                fill="none"
-                shapeRendering="geometricPrecision"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                width="26"
-                height="26"
-                color="#333"
+                data-testid='geist-icon'
+                fill='none'
+                shapeRendering='geometricPrecision'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1'
+                viewBox='0 0 24 24'
+                width='26'
+                height='26'
+                color='#333'
               >
-                <path d="M16.88 3.549L7.12 20.451"></path>
+                <path d='M16.88 3.549L7.12 20.451'></path>
               </svg>
               <Link href={"/proyectos"}>
                 <a
@@ -129,19 +120,19 @@ function Header() {
                 </a>
               </Link>
               <svg
-                data-testid="geist-icon"
-                fill="none"
-                shapeRendering="geometricPrecision"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                width="26"
-                height="26"
-                color="#333"
+                data-testid='geist-icon'
+                fill='none'
+                shapeRendering='geometricPrecision'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1'
+                viewBox='0 0 24 24'
+                width='26'
+                height='26'
+                color='#333'
               >
-                <path d="M16.88 3.549L7.12 20.451"></path>
+                <path d='M16.88 3.549L7.12 20.451'></path>
               </svg>
               <Link href={"/hobies"}>
                 <a
@@ -154,19 +145,19 @@ function Header() {
                 </a>
               </Link>
               <svg
-                data-testid="geist-icon"
-                fill="none"
-                shapeRendering="geometricPrecision"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                width="26"
-                height="26"
-                color="#333"
+                data-testid='geist-icon'
+                fill='none'
+                shapeRendering='geometricPrecision'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1'
+                viewBox='0 0 24 24'
+                width='26'
+                height='26'
+                color='#333'
               >
-                <path d="M16.88 3.549L7.12 20.451"></path>
+                <path d='M16.88 3.549L7.12 20.451'></path>
               </svg>
               <Link href={"/habilidades"}>
                 <a
@@ -179,19 +170,19 @@ function Header() {
                 </a>
               </Link>
               <svg
-                data-testid="geist-icon"
-                fill="none"
-                shapeRendering="geometricPrecision"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-                viewBox="0 0 24 24"
-                width="26"
-                height="26"
-                color="#333"
+                data-testid='geist-icon'
+                fill='none'
+                shapeRendering='geometricPrecision'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1'
+                viewBox='0 0 24 24'
+                width='26'
+                height='26'
+                color='#333'
               >
-                <path d="M16.88 3.549L7.12 20.451"></path>
+                <path d='M16.88 3.549L7.12 20.451'></path>
               </svg>
               <Link href={"/contacto"}>
                 <a
@@ -209,21 +200,21 @@ function Header() {
               <a
                 className={styles.descargar}
                 onClick={() => setActivo(false)}
-                href="/pdf/MartinAlexanderFloresTorres-CV.pdf"
+                href='/pdf/MartinAlexanderFloresTorres-CV.pdf'
                 download
               >
                 Descargar CV
-                <i className="bx bxs-download" />
+                <i className='bx bxs-download' />
               </a>
               {pathname !== "/contacto" && (
                 <Link href={"/contacto"}>
                   <a
                     className={styles.descargar}
                     onClick={() => setActivo(false)}
-                    href="#"
+                    href='#'
                   >
                     Contáctame
-                    <i className="bx bx-envelope" />
+                    <i className='bx bx-envelope' />
                   </a>
                 </Link>
               )}
@@ -232,9 +223,9 @@ function Header() {
 
           <div className={styles.menu} onClick={() => setActivo(!activo)}>
             {activo ? (
-              <i className="bx bx-x" />
+              <i className='bx bx-x' />
             ) : (
-              <i className="bx bx-menu-alt-right" />
+              <i className='bx bx-menu-alt-right' />
             )}
           </div>
         </nav>

@@ -86,36 +86,36 @@ function Contacto() {
             </legend>
             <div className={styles.campos}>
               <input
-                type="text"
+                type='text'
                 value={nombre}
-                name="nombre"
+                name='nombre'
                 onChange={(e) => setNombre(e.target.value.trimStart())}
-                placeholder="Nombre"
+                placeholder='Nombre'
               />
               <input
-                type="email"
+                type='email'
                 value={email}
-                name="email"
+                name='email'
                 onChange={(e) => setEmail(e.target.value.trimStart())}
-                placeholder="Email"
+                placeholder='Email'
               />
               <input
-                type="text"
+                type='text'
                 value={asunto}
-                name="asunto"
+                name='asunto'
                 onChange={(e) => setAsunto(e.target.value.trimStart())}
-                placeholder="Asunto"
+                placeholder='Asunto'
               />
               <textarea
-                cols="30"
-                rows="10"
-                name="mensaje"
-                placeholder="Mensaje"
+                cols='30'
+                rows='10'
+                name='mensaje'
+                placeholder='Mensaje'
                 value={sms}
                 onChange={(e) => setSms(e.target.value.trimStart())}
               />
               <input
-                type="submit"
+                type='submit'
                 value={`${enviando ? "Enviando..." : "Contactame Ahora"}`}
               />
             </div>
@@ -129,73 +129,63 @@ function Contacto() {
               Comunícate conmigo por medio de mis redes sociales
             </p>
             <a
-              href="https://github.com/MartinAlexanderFloresTorres"
+              href='https://github.com/MartinAlexanderFloresTorres'
               target={"_blank"}
-              rel="noreferrer"
+              rel='noreferrer'
               className={styles.link}
             >
-              <i className="bx bxl-github" />
-              <span>
-                <span className={styles.mediante}>Mediante</span> github
-              </span>
+              <i className='bx bxl-github' />
+              <span>github</span>
             </a>
 
             <a
-              href="https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/"
+              href='https://www.linkedin.com/in/martin-alexander-flores-torres-993298245/'
               target={"_blank"}
-              rel="noreferrer"
+              rel='noreferrer'
               className={styles.link}
             >
-              <i className="bx bxl-linkedin" />
-              <span>
-                <span className={styles.mediante}>Mediante</span> linkedin
-              </span>
+              <i className='bx bxl-linkedin' />
+              <span>linkedin</span>
             </a>
 
             <a
-              href="https://web.facebook.com/garena.flores.9"
+              href='https://web.facebook.com/garena.flores.9'
               target={"_blank"}
-              rel="noreferrer"
+              rel='noreferrer'
               className={styles.link}
             >
-              <i className="bx bxl-facebook" />
-              <span>
-                <span className={styles.mediante}>Mediante</span> facebook
-              </span>
+              <i className='bx bxl-facebook' />
+              <span>facebook</span>
             </a>
 
             <a
-              href="https://www.instagram.com/martin_flores_28"
+              href='https://www.instagram.com/martin_flores_28'
               target={"_blank"}
-              rel="noreferrer"
+              rel='noreferrer'
               className={styles.link}
             >
-              <i className="bx bxl-instagram" />
-              <span>
-                <span className={styles.mediante}>Mediante</span> instagram
-              </span>
+              <i className='bx bxl-instagram' />
+              <span>instagram</span>
             </a>
 
             <a
-              href="https://api.whatsapp.com/send?phone=929254912&text=Hola Martin, Me gustaria Contratarte."
+              href='https://api.whatsapp.com/send?phone=929254912&text=Hola Martin, Me gustaria Contratarte.'
               target={"_blank"}
-              rel="noreferrer"
+              rel='noreferrer'
               className={styles.link}
             >
-              <i className="bx bxl-whatsapp" />
-              <span>
-                <span className={styles.mediante}>Mediante</span> whatsapp
-              </span>
+              <i className='bx bxl-whatsapp' />
+              <span>whatsapp</span>
             </a>
           </div>
           <a
-            href="https://github.com/MartinAlexanderFloresTorres?tab=repositories"
+            href='https://github.com/MartinAlexanderFloresTorres?tab=repositories'
             target={"_blank"}
-            rel="noreferrer"
+            rel='noreferrer'
             className={styles.link_dos}
           >
             Descarga recursos desde mi Repositorio
-            <i className="bx bx-right-arrow-alt" />
+            <i className='bx bx-right-arrow-alt' />
           </a>
         </div>
       </main>

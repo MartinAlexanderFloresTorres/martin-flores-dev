@@ -24,7 +24,7 @@
   --gris-2: #444;
   --gris-1: #333;
   --gris-0: #0e0e0e;
-  --item-hover: #0d0d0d;
+  --item-hover: #131313;
   --altura: 80px;
   --transition-03s: 0.3s ease all;
   --transition-05s: 0.5s ease all;
@@ -41,13 +41,16 @@
   --naranja: #ff4d4d;
   --amarillo: #f9cb28;
 
+  --bg-loader-1: #0a0a0a;
+  --bg-loader-2: #0f0f0f;
+  
   --shadow: 0 0 1px 0 hsla(0, 0%, 100%, 0.7);
   --shadow-habilidad: rgba(191, 0, 255, 0.026);
 
   --bg-boton: #fff;
   --border-color: hsla(0, 0%, 100%, 0.07);
   --color-svg: #fff;
-  --shadow-color: hsla(0, 0%, 100%, 0.1);
+  --shadow-color: hsla(0, 0%, 100%, 0.072);
   --boton-submit: #24292e;
   --bg-header: rgba(0, 0, 0, 0.8);
   --tecnologia-bg: transparent;
@@ -78,6 +81,8 @@ html.claro body {
   --shadow-habilidad: rgba(18, 62, 84, 0.1);
   --bg-header-btn: #007cf0;
   --color-header-btn: rgb(255, 255, 255);
+  --bg-loader-1: #f8f8f8;
+  --bg-loader-2: #f9f9f9;
 
   --shadow: 0 0 1px 0 hsla(0, 0%, 0%, 0.7);
   --tecnologia-bg: #000;
